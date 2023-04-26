@@ -103,3 +103,60 @@ function popElement(arr) {
   if (val) return "true";
   else return "false";
 } */
+
+// #8kyu Training JS #7: if..else and ternary operator
+/* function saleHotdogs(n) {
+  if (n < 5) return n * 100;
+  else if (n >= 5 && n < 10) return n * 95;
+  else return n * 90;
+}
+console.log(saleHotdogs(1));
+ */
+
+// #8kyu Training JS #8: Conditional statement--switch
+/* function howManydays(month) {
+  var days;
+  switch (month) {
+    case 2:
+      days = 28;
+      break;
+    case 4:
+      days = 30;
+      break;
+    case 6:
+      days = 30;
+      break;
+    case 9:
+      days = 30;
+      break;
+    case 11:
+      days = 30;
+      break;
+    default:
+      days = 31;
+  }
+  return days;
+}
+console.log(howManydays(2)); */
+
+// #8kyu Training JS #9: loop statement --while and do..while
+/* function padIt(str, n) {
+  let start = 0;
+  while (start < n) {
+    if (start % 2 === 0) str = `*${str}`;
+    else str = `${str}*`;
+    start++;
+  }
+  return str;
+} */
+
+// #8kyu Training JS #10: loop statement --for
+/* function pickIt(arr) {
+  var odd = [],
+    even = [];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] % 2 === 0 ? even.push(arr[i]) : odd.push(arr[i]);
+  }
+  return [odd, even];
+}
+ */
