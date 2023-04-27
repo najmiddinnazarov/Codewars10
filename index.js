@@ -160,3 +160,64 @@ console.log(howManydays(2)); */
   return [odd, even];
 }
  */
+
+// #8kyu Training JS #11: loop statement --break,continue
+/* function grabDoll(dolls) {
+  var bag = [];
+  for (i in dolls) {
+    if (dolls[i] == "Hello Kitty" || dolls[i] == "Barbie doll")
+      bag.push(dolls[i]);
+    if (bag.length < 3) continue;
+    break;
+  }
+  return bag;
+}
+console.log(
+  grabDoll([
+    "Mickey Mouse",
+    "Barbie doll",
+    "Hello Kitty",
+    "Hello Kitty",
+    "Hello Kitty",
+    "Snow white",
+  ])
+);
+ */
+
+// #8kyu Training JS #12: loop statement --for..in and for..of
+/* function giveMeFive(obj) {
+  let result = [];
+  for (const key in obj) {
+    if (key.length == 5) result.push(key);
+    if (obj[key].length == 5) result.push(obj[key]);
+  }
+  return result;
+}
+console.log(giveMeFive({ Our: "earth", is: "a", beautyful: "world" }));
+ */
+
+// #8kyu Training JS #13: Number object and its properties
+/* function whatNumberIsIt(n) {
+  if (n === Number.MAX_VALUE) {
+    return "Input number is Number.MAX_VALUE";
+  } else if (n === Number.MIN_VALUE) {
+    return "Input number is Number.MIN_VALUE";
+  } else if (isNaN(n)) {
+    return "Input number is Number.NaN";
+  } else if (n === Number.NEGATIVE_INFINITY) {
+    return "Input number is Number.NEGATIVE_INFINITY";
+  } else if (n === Number.POSITIVE_INFINITY) {
+    return "Input number is Number.POSITIVE_INFINITY";
+  } else {
+    return "Input number is " + n;
+  }
+}
+console.log(whatNumberIsIt(1.7976931348623157e308)); */
+
+// #8kyu Training JS #14: Methods of Number object--toString() and toLocaleString()
+/* function colorOf(r, g, b) {
+  return `#${r.toString(16).padStart(2, "0")}${g
+    .toString(16)
+    .padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
+}
+console.log(colorOf(255, 2, 0)); */
