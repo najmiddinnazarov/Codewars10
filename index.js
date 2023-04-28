@@ -221,3 +221,35 @@ console.log(whatNumberIsIt(1.7976931348623157e308)); */
     .padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
 }
 console.log(colorOf(255, 2, 0)); */
+
+// #8kyu Training JS #15: Methods of Number object--toFixed(), toExponential() and toPrecision()
+/* function howManySmaller(arr, n) {
+  return arr.map((d) => d.toFixed(2)).filter((d) => d < n).length;
+}
+console.log(howManySmaller([1.234, 1.235, 1.228], 1.24));
+ */
+
+// #8kyu Training JS #16: Methods of String object--slice(), substring() and substr()
+/* function cutIt(arr) {
+  return arr.map((vl) => vl.slice(0, Math.min(...arr.map((vl) => vl.length))));
+}
+console.log(cutIt(["ab", "cde", "fgh"]));
+ */
+
+// #8kyu Training JS #17: Methods of String object--indexOf(), lastIndexOf() and search()
+/* function firstToLast(str, c) {
+  let first = str.indexOf(c);
+  let last = str.lastIndexOf(c);
+  return first == -1 ? -1 : last - first;
+}
+console.log(firstToLast("ababc", "c"));
+ */
+// #8kyu Training JS #18: Methods of String object--concat() split() and its good friend join()
+/* function splitAndMerge(string, separator) {
+  return string
+    .split(" ")
+    .map((vl) => [...vl].join(separator))
+    .join(" ");
+}
+console.log(splitAndMerge("My name is John", "-"));
+ */
