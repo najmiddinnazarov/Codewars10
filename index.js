@@ -253,3 +253,106 @@ console.log(firstToLast("ababc", "c"));
 }
 console.log(splitAndMerge("My name is John", "-"));
  */
+
+// #7kyu Training JS #19: Methods of String object--toUpperCase() toLowerCase() and replace()
+/* function alienLanguage(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((vl) =>
+      vl.replace(vl.substring(0, vl.length - 1), (x) => x.toUpperCase())
+    )
+    .join(" ");
+}
+console.log(alienLanguage("HELLO WORLD"));
+ */
+
+// #7kyu Training JS #20: Methods of String object--charAt() charCodeAt() and fromCharCode()
+/* function topSecret(str) {
+  let dict = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  let Dict = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  return str.replace(/[a-z]/gi, (v) => {
+    if (v === v.toLowerCase()) {
+      return dict.indexOf(v.toLowerCase()) - 3 < 0
+        ? dict[dict.indexOf(v.toLowerCase()) - 3 + 26]
+        : dict[dict.indexOf(v.toLowerCase()) - 3];
+    }
+    if (v === v.toUpperCase()) {
+      return Dict.indexOf(v) - 3 < 0
+        ? Dict[Dict.indexOf(v) - 3 + 26]
+        : Dict[Dict.indexOf(v) - 3];
+    }
+    return v;
+  });
+}
+answer1 = "3745";
+answer2 = "RILc";
+answer3 = "Expired biscuits";
+console.log(topSecret("Pb qdph lv Mrkq"));
+ */
+
+// #7kyu Training JS #21: Methods of String object--trim() and the string template
+/* function fiveLine(s) {
+  let str = "";
+  s = s.trim();
+  for (let i = 1; i <= 5; i++) {
+    str += `${s.repeat(i)}\n`;
+  }
+  return str.slice(0, -1);
+}
+console.log(fiveLine("  a"));
+ */
