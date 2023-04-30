@@ -356,3 +356,14 @@ console.log(topSecret("Pb qdph lv Mrkq"));
 }
 console.log(fiveLine("  a"));
  */
+
+// #7kyu Training JS #22: Unlock new skills--Arrow function,spread operator and deconstruction
+/* var shuffleIt = (arr, ...args) => {
+  for (var i = 0; i < args.length; i++) {
+    var [a, b] = [args[i][0], args[i][1]];
+    [arr[a], arr[b]] = [arr[b], arr[a]];
+  }
+  return arr;
+};
+console.log(shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4], [2, 3]));
+ */
