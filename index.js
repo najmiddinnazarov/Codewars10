@@ -367,3 +367,14 @@ console.log(fiveLine("  a"));
 };
 console.log(shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4], [2, 3]));
  */
+
+// #7kyu Training JS #24: methods of arrayObject---splice() and slice()
+/* function threeInOne(arr) {
+  let array = [];
+  for (let i = 0; i < arr.length; i += 3) {
+    array.push(arr[i] + arr[i + 1] + arr[i + 2]);
+  }
+  return array;
+}
+console.log(threeInOne([1, 3, 5, 2, 4, 6, 7, 7, 7]));
+ */
