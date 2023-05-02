@@ -392,3 +392,25 @@ console.log(threeInOne([1, 3, 5, 2, 4, 6, 7, 7, 7]));
 }
 console.log(isolateIt(["abcd", "efgh"]));
  */
+
+// #7kyu Training JS #27: methods of arrayObject---filter()
+/* function countGrade(scores) {
+  let obj = {
+    S: 0,
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0,
+    X: 0,
+  };
+  scores.filter((score) => {
+    if (score == 100) obj["S"]++;
+    if (score < 100 && score >= 90) obj["A"]++;
+    if (score < 90 && score >= 80) obj["B"]++;
+    if (score < 80 && score >= 60) obj["C"]++;
+    if (score < 60 && score >= 0) obj["D"]++;
+    if (score == -1) obj["X"]++;
+  });
+  return obj;
+}
+console.log(countGrade([50, 60, 70, 80, 90, 100])); */
