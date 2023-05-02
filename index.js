@@ -378,3 +378,17 @@ console.log(shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4], [2, 3]));
 }
 console.log(threeInOne([1, 3, 5, 2, 4, 6, 7, 7, 7]));
  */
+
+// #7kyu Training JS #26: methods of arrayObject---map()
+/* function isolateIt(arr) {
+  return arr.map((v) => {
+    if (v.length % 2 == 0) {
+      return v.slice(0, v.length / 2) + "|" + v.slice(v.length / 2);
+    }
+    if (v.length % 2 !== 0) {
+      return v.slice(0, v.length / 2) + "|" + v.slice(v.length / 2 + 1);
+    }
+  });
+}
+console.log(isolateIt(["abcd", "efgh"]));
+ */
