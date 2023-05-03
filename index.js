@@ -414,3 +414,78 @@ console.log(isolateIt(["abcd", "efgh"]));
   return obj;
 }
 console.log(countGrade([50, 60, 70, 80, 90, 100])); */
+
+// #7kyu Training JS #28: methods of arrayObject---every() and some()
+/* function mirrorImage(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if ([...`${arr[i]}`].reverse().join("") === `${arr[i + 1]}`) {
+      return [arr[i], arr[i + 1]];
+    }
+  }
+  return [-1, -1];
+}
+console.log(mirrorImage([454, 86, 57, 75, 16, 88]));
+ */
+
+// #7kyu Training JS #29: methods of arrayObject---concat() and join()
+/* function bigToSmall(arr) {
+  return []
+    .concat(...arr)
+    .sort((a, b) => b - a)
+    .join(">");
+}
+console.log(
+  bigToSmall([
+    [1, 2],
+    [3, 4],
+    [5, 6],
+  ])
+);
+ */
+
+// #7kyu Training JS #30: methods of arrayObject---reduce() and reduceRight()
+/* function tailAndHead(arr) {
+  let output = [];
+  for (let i = 0; i < arr.length - 1; i++)
+    output.push((arr[i] % 10) + Number(`${arr[i + 1]}`[0]));
+  return output.reduce((a, b) => a * b);
+}
+console.log(tailAndHead([1, 2, 3, 4, 5]));
+ */
+
+// #7kyu Training JS #31: methods of arrayObject---isArray() indexOf() and toString()
+/* function blackAndWhite(arr) {
+  if (!Array.isArray(arr)) return `It's a fake array`;
+  else if (arr.includes(5) && arr.includes(13)) return `It's a black array`;
+  else return `It's a white array`;
+}
+console.log(blackAndWhite([4, 13]));
+ */
+
+// #7kyu Training JS #32: methods of Math---round() ceil() and floor()
+/* function roundIt(n) {
+  let arr = `${n}`.split(".");
+  if (arr[0].length > arr[1].length) return Math.floor(n);
+  else if (arr[0].length < arr[1].length) return Math.ceil(n);
+  else return Math.round(n);
+}
+console.log(roundIt(3.45));
+ */
+
+// #7kyu Training JS #33: methods of Math---max() min() and abs()
+/* function maxMin(arr1, arr2) {
+  const arr = arr2.map((v, i) => v - arr1[i], 0);
+  return [
+    Math.max(...arr.map((v) => Math.abs(v))),
+    Math.min(...arr.map((v) => Math.abs(v))),
+  ];
+}
+console.log(maxMin([1, 3, 5], [9, 8, 7]));
+ */
+
+// #7kyu Training JS #34: methods of Math---pow() sqrt() and cbrt()
+/* function cutCube(volume, n) {
+  return !(Math.cbrt(n) % 1) && !(Math.cbrt(volume / n) % 1);
+}
+console.log(cutCube(512, 8));
+ */
