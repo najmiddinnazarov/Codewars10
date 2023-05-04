@@ -244,6 +244,7 @@ console.log(cutIt(["ab", "cde", "fgh"]));
 }
 console.log(firstToLast("ababc", "c"));
  */
+
 // #8kyu Training JS #18: Methods of String object--concat() split() and its good friend join()
 /* function splitAndMerge(string, separator) {
   return string
@@ -345,7 +346,7 @@ answer3 = "Expired biscuits";
 console.log(topSecret("Pb qdph lv Mrkq"));
  */
 
-// #7kyu Training JS #21: Methods of String object--trim() and the string template
+// #8kyu Training JS #21: Methods of String object--trim() and the string template
 /* function fiveLine(s) {
   let str = "";
   s = s.trim();
@@ -368,6 +369,34 @@ console.log(fiveLine("  a"));
 console.log(shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4], [2, 3]));
  */
 
+// #7kyu Training JS #23: methods of arrayObject---push(), pop(), shift() and unshift()
+/* function infiniteLoop(arr, d, n) {
+  for (let i = 1; i <= n; i++) {
+    if (d === "left") {
+      arr[2].push(arr[0].shift());
+      arr[1].push(arr[2].shift());
+      arr[0].push(arr[1].shift());
+    }
+    if (d === "right") {
+      arr[0].unshift(arr[2].pop());
+      arr[1].unshift(arr[0].pop());
+      arr[2].unshift(arr[1].pop());
+    }
+  }
+  return arr;
+}
+console.log(
+  infiniteLoop(
+    [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+    ],
+    "left",
+    1
+  )
+); */
+
 // #7kyu Training JS #24: methods of arrayObject---splice() and slice()
 /* function threeInOne(arr) {
   let array = [];
@@ -378,6 +407,22 @@ console.log(shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4], [2, 3]));
 }
 console.log(threeInOne([1, 3, 5, 2, 4, 6, 7, 7, 7]));
  */
+
+// #7kyu Training JS #25: methods of arrayObject---reverse() and sort()
+/* function sortIt(arr) {
+  return arr.slice().sort((a, b) => {
+    let countA = arr.filter((v) => v === a).length;
+    let countB = arr.filter((v) => v === b).length;
+    if (countA === countB) {
+      return b - a;
+    } else if (countA > countB) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+}
+console.log(sortIt([1, 1, 1, 2, 2, 3])); */
 
 // #7kyu Training JS #26: methods of arrayObject---map()
 /* function isolateIt(arr) {
@@ -427,7 +472,7 @@ console.log(countGrade([50, 60, 70, 80, 90, 100])); */
 console.log(mirrorImage([454, 86, 57, 75, 16, 88]));
  */
 
-// #7kyu Training JS #29: methods of arrayObject---concat() and join()
+// #8kyu Training JS #29: methods of arrayObject---concat() and join()
 /* function bigToSmall(arr) {
   return []
     .concat(...arr)
@@ -453,7 +498,7 @@ console.log(
 console.log(tailAndHead([1, 2, 3, 4, 5]));
  */
 
-// #7kyu Training JS #31: methods of arrayObject---isArray() indexOf() and toString()
+// #8kyu Training JS #31: methods of arrayObject---isArray() indexOf() and toString()
 /* function blackAndWhite(arr) {
   if (!Array.isArray(arr)) return `It's a fake array`;
   else if (arr.includes(5) && arr.includes(13)) return `It's a black array`;
@@ -462,7 +507,7 @@ console.log(tailAndHead([1, 2, 3, 4, 5]));
 console.log(blackAndWhite([4, 13]));
  */
 
-// #7kyu Training JS #32: methods of Math---round() ceil() and floor()
+// #8kyu Training JS #32: methods of Math---round() ceil() and floor()
 /* function roundIt(n) {
   let arr = `${n}`.split(".");
   if (arr[0].length > arr[1].length) return Math.floor(n);
@@ -483,9 +528,79 @@ console.log(roundIt(3.45));
 console.log(maxMin([1, 3, 5], [9, 8, 7]));
  */
 
-// #7kyu Training JS #34: methods of Math---pow() sqrt() and cbrt()
+// #8kyu Training JS #34: methods of Math---pow() sqrt() and cbrt()
 /* function cutCube(volume, n) {
   return !(Math.cbrt(n) % 1) && !(Math.cbrt(volume / n) % 1);
 }
 console.log(cutCube(512, 8));
+ */
+
+// #7kyu Training JS #35: methods of Math---log() and its family
+/* function thinkingAndTesting(number, base) {
+  return number - base ** Math.floor(Math.log(number) / Math.log(base));
+}
+console.log(thinkingAndTesting(1, 2)); */
+
+// #7kyu Training JS #36: methods of Math---kata author's lover:random()
+/* function rndCode() {
+  let alphabet = "ABCDEFGHIJKLM";
+  let number = "1234567890";
+  let symbol = "~!@#$%^&*";
+  return [
+    alphabet[Math.trunc(Math.random() * 13)],
+    alphabet[Math.trunc(Math.random() * 13)],
+    number[Math.trunc(Math.random() * 10)],
+    number[Math.trunc(Math.random() * 10)],
+    number[Math.trunc(Math.random() * 10)],
+    number[Math.trunc(Math.random() * 10)],
+    symbol[Math.trunc(Math.random() * 9)],
+
+    symbol[Math.trunc(Math.random() * 9)],
+  ].join("");
+}
+console.log(rndCode()); */
+
+// #7kyu Training JS #37: Unlock new weapon---RegExp Object
+/* function countAnimals(animals, count) {
+  let obj = {};
+  for (const i of animals.split(",")) {
+    i in obj ? obj[i]++ : (obj[i] = 1);
+  }
+  return count.map((vl) => (obj[vl] ? obj[vl] : 0));
+}
+console.log(countAnimals("dog,cat", ["dog", "cat", "pig"]));
+ */
+
+// #7kyu Training JS #38: Regular Expression--"^","$", "." and test()
+/* function findSimilarity(str, word) {
+  let letter = word[0] + word.slice(1, -1).replace(/./g, ".") + word.slice(-1);
+  let regex = new RegExp("^" + letter + "$");
+  return str
+    .split(" ")
+    .filter((v) => regex.test(v))
+    .join(" ");
+}
+console.log(findSimilarity("bag dog dig dot doog dogs", "dog"));
+ */
+
+// #7kyu Training JS #39: Regular Expression--"?", "*", "+" and "{}"
+/* var regex = /^(-?)9.*0000$/;
+console.log(regex.test(91110000));
+ */
+
+// #7kyu Training JS #40: Regular Expression--"|", "[]" and "()"
+/* var regex = /(http|https):\/\/[a-z\d.]+\.(net|com)/gi;
+console.log(regex.test("http://codewars.com"));
+ */
+
+// #6kyu Training JS #41: Regular Expression--"\"
+/* var regex = /\b(\w)(\w)?(\w)?\w?\3\2\1\b/g;
+console.log("aa bbb cccc ddddd eeeeee fffffff".match(regex)); */
+
+// #7kyu Training JS #42: Regular Expression--( ?: ), ( ?= ) and ( ?! )
+/* var regex = /(\d)(?=(\d{3})+$)/g;
+function addCommas(money, reg) {
+  return money.replace(reg, (x) => x + ",");
+}
+console.log(addCommas("$123", regex));
  */
